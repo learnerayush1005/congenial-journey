@@ -99,7 +99,8 @@ const apps = [
         desktop_shortcut: true,
         isExternalApp: true,
         url: "https://github.com/vivek9patel",
-        screen: () => {},
+        // Required by the window renderer even for external apps.
+        screen: () => null,
     },
     {
         id: "tars",
@@ -109,7 +110,9 @@ const apps = [
         favourite: false,
         desktop_shortcut: true,
         isExternalApp: true,
-        url: "https://www.vivek9patel.com/tars"
+        url: "https://www.vivek9patel.com/tars",
+        // Required by the window renderer even for external apps.
+        screen: () => null,
     },
 ]
 
